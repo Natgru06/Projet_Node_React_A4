@@ -1,0 +1,67 @@
+<form [formGroup]="lessonForm">
+  <div>
+    <label class="col-md-1" for="titleField"
+           [class]="lessonForm.get('title')?.invalid ? 'text-danger' : ''"
+    >Title</label>
+
+    <input type="text" formControlName="title" id="titleField"
+           placeholder="Enter title">
+  </div>
+  <div>
+    <label class="col-md-1" for="descriptionField"
+           [class]="lessonForm.get('description')?.invalid ? 'text-danger' : ''"
+    >Description</label>
+    <textarea formControlName="description" id="descriptionField" rows="3"
+              placeholder="Enter description"></textarea>
+  </div>
+  <div>
+    <label class="col-md-1" for="categoryField"
+           [class]="lessonForm.get('category')?.invalid ? 'text-danger' : ''">Category</label>
+    <input type="text" formControlName="category" id="categoryField"
+           placeholder="Enter category">
+  </div>
+  <div>
+    <label class="col-md-1" for="levelField" ngbTooltip="Enter value between 1(basics) to
+10(advanced)"
+           [class]="lessonForm.get('level')?.invalid ? 'text-danger' : ''">Level</label>
+    <input type="text" formControlName="level" id="levelField"
+           placeholder="Enter level" min="1" max="10">
+  </div>
+  <div>
+    <label class="col-md-1" for="prerequisiteField"
+           [class]="lessonForm.get('prerequisite')?.invalid ? 'text-danger' : ''">Prerequisite</label>
+    <input type="text" formControlName="prerequisite" id="prerequisiteField"
+           placeholder="Enter prerequisite">
+  </div>
+  <div>
+    <label class="col-md-1" for="tagsField" ngbTooltip="Enter tags, separated by
+commas"
+           [class]="lessonForm.get('tags')?.invalid ? 'text-danger' : ''">Tags</label>
+    <input type="text" formControlName="tags" id="tagsField"
+           placeholder="Enter tags">
+  </div>
+  <div>
+    <label class="col-md-1" for="copyrightField"
+           [class]="lessonForm.get('copyright')?.invalid ? 'text-danger' : ''">Copyright</label>
+    <input type="text" formControlName="copyright" id="copyrightField"
+           placeholder="Enter copyright">
+  </div>
+
+
+  <div class="row mt-2">
+    <label class="col-md-2"></label>
+    <button type="button" class="btn btn-primary col-md-2"
+            (click)="onClickSubmit()"
+            [disabled]="!lessonForm.valid"
+    >Submit</button>
+    <span *ngIf="lessonForm.invalid" class="col-md-8 text-danger">
+ Please fill out all required fields.
+ </span>
+  </div>
+
+</form>
+
+
+<button class="btn btn-primary" [routerLink]="['/lesson', 1234 ]">Detail
+  for lesson 1234</button>
+
