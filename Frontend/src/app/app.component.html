@@ -1,0 +1,20 @@
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="#"></a>
+  <ul class="navbar-nav mr-auto">
+    <li ngbDropdown class="nav-item">
+      <a ngbDropdownToggle id="navbarMenu" class="nav-link dropdowntoggle" role="button">
+        Menu
+      </a>
+      <div ngbDropdownMenu aria-labelledby="navbarMenu" class="dropdownmenu">
+        <a class="dropdown-item" routerLink="/">Home</a>
+        <a class="dropdown-item" routerLink="/lesson-edit-form">Lesson Edit Form</a>
+        <a class="dropdown-item" routerLink="/lesson-list-page">Lesson List Page</a>
+      </div>
+    </li>
+  </ul>
+</nav>
+
+<router-outlet></router-outlet>
+
+

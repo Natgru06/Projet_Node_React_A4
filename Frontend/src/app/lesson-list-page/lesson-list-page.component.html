@@ -1,0 +1,10 @@
+<h1>Learning Package</h1>
+<button (click)="getLearningPackage()">Get Learning Package</button>
+<div *ngIf="learningPackage">
+  <h2>Learning Package Data:</h2>
+  <ul>
+    <li *ngFor="let item of learningPackage">
+      {{ item.id }} - {{ item.description }} - Priority: {{ item.priority }}
+    </li>
+  </ul>
+</div>

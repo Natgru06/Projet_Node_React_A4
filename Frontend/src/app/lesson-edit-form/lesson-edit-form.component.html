@@ -1,0 +1,50 @@
+<div class="container">
+  <h1>Lesson Search</h1>
+  <form [formGroup]="lessonForm">
+    <div class="form-group">
+      <label  for="titleField" [class]="lessonForm.get('title')?.invalid ? 'text-danger' : ''"> Title </label>
+      <input type="text" formControlName="title" id="titleField" class="form-control rounded" placeholder="Enter title">
+
+    </div>
+    <div class="form-group">
+      <label for="descriptionField" [class]="lessonForm.get('description')?.invalid ? 'text-danger' : ''">Description</label>
+      <textarea formControlName="description" id="descriptionField" class="form-control rounded" rows="3" placeholder="Enter description"></textarea>
+    </div>
+    <div class="form-group">
+      <label  for="categoryField" [class]="lessonForm.get('category')?.invalid ? 'text-danger' : ''">Category</label>
+      <input type="text" formControlName="category" id="categoryField" placeholder="Enter category" class="form-control rounded">
+    </div>
+    <div class="form-group">
+      <label  for="levelField" ngbTooltip="Enter value between 1(basics) to 10(advanced)" [class]="lessonForm.get('level')?.invalid ? 'text-danger' : ''">Level</label>
+      <input type="text" formControlName="level" id="levelField" placeholder="Enter level" min="1" max="10" class="form-control rounded">
+    </div>
+    <div class="form-group">
+      <label  for="prerequisiteField" [class]="lessonForm.get('prerequisite')?.invalid ? 'text-danger' : ''">Prerequisite</label>
+      <input type="text" formControlName="prerequisite" id="prerequisiteField" placeholder="Enter prerequisite" class="form-control rounded">
+    </div>
+    <div class="form-group">
+      <label  for="tagsField" ngbTooltip="Enter tags, separated by commas" [class]="lessonForm.get('tags')?.invalid ? 'text-danger' : ''">Tags</label>
+      <input type="text" formControlName="tags" id="tagsField" placeholder="Enter tags" class="form-control rounded">
+    </div>
+    <div class="form-group">
+      <label  for="copyrightField" [class]="lessonForm.get('copyright')?.invalid ? 'text-danger' : ''">Copyright</label>
+      <input type="text" formControlName="copyright" id="copyrightField" placeholder="Enter copyright" class="form-control rounded">
+    </div>
+
+
+    <div class="row mt-2">
+      <label class="col-md-2"></label>
+      <button type="button" class="btn btn-primary col-md-2"
+              (click)="onClickSubmit()"
+              [disabled]="!lessonForm.valid"
+      >Submit</button>
+      <span *ngIf="lessonForm.invalid" class="col-md-8 text-danger">
+   Please fill out all required fields.
+   </span>
+    </div>
+
+  </form>
+</div>
+
+
+
