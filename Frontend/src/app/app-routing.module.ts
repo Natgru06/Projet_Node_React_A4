@@ -1,15 +1,12 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import {LessonEditFormComponent} from "./lesson-edit-form/lesson-edit-form.component";
-import {LessonDetailPageComponent} from "./lesson-detail-page/lesson-detail-page.component";
-import {LessonListPageComponent} from "./lesson-list-page/lesson-list-page.component";
-import {HomeComponent} from "./home/home.component";
-
+import { HomeComponent } from './home/home.component';
+import { QuizComponent } from './quiz/quiz.component';
+import { QuizSummaryComponent } from './quiz-summary/quiz-summary.component';
 const routes: Routes = [
   {path: '',component:HomeComponent},
-  { path : 'lesson-edit-form', component:LessonEditFormComponent},
-  { path:'lesson/:id', component: LessonDetailPageComponent },
-  { path:'lesson-list-page', component:LessonListPageComponent}
+  { path: 'quiz', component: QuizComponent },
+  { path: 'quiz-summary', component: QuizSummaryComponent }
 ];
 
 @NgModule({

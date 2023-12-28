@@ -1,0 +1,9 @@
+<div class="summary-container">
+  <h2>Quiz Summary</h2>
+  <div *ngFor="let response of quizDataService.userResponses; let i = index">
+    <p>Question {{ i + 1 }}: {{ response.question }}</p>
+    <p>User's Answer: {{ response.userAnswer }}</p>
+    <p>Correct Answer: {{ response.correctAnswer }}</p>
+    <hr>
+  </div>
+</div>

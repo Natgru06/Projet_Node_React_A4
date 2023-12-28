@@ -1,52 +1,63 @@
+<!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Lesson Platform</title>
+  <title>Computer Science Quiz</title>
   <style>
     body {
       font-family: Arial, sans-serif;
-      margin: 20px;
-    }
-
-    header {
+      background-color: #f4f4f4;
       text-align: center;
-      padding: 20px;
-      background-color: #f1f1f1;
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
     }
 
-    section {
-      margin: 20px 0;
+    .home-container {
+      padding: 50px;
+      margin: 50px auto;
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      max-width: 600px;
     }
 
-    footer {
-      text-align: center;
-      padding: 10px;
-      position: fixed;
-      bottom: 0;
-      width: 100%;
-      background-color: #f1f1f1;
+    h1 {
+      color: #333;
+    }
+
+    p {
+      color: #666;
+    }
+
+    button {
+      padding: 10px 20px;
+      font-size: 1.2em;
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #0056b3;
     }
   </style>
 </head>
+
 <body>
 
-<header>
-  <h1>Lesson Platform</h1>
-  <p>Welcome to our platform where you can find various lessons.</p>
-</header>
+<div class="home-container">
+  <h1>Welcome to Computer Science Quiz</h1>
+  <p>Test your knowledge with our computer science quizzes!</p>
+  <button (click)="startQuiz()">Start Quiz</button>
+</div>
 
-<section>
-  <h2>Featured Lessons</h2>
-</section>
-
-<section>
-  <h2>All Lessons</h2>
-</section>
-
-<footer>
-  <p>&copy; 2023 Lesson Platform</p>
-</footer>
 
 </body>
+
 </html>

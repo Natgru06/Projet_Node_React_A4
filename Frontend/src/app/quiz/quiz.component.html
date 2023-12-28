@@ -1,0 +1,12 @@
+<div class="quiz-container">
+  <h2>Question {{ currentQuestionIndex }}</h2>
+  <p>{{ question?.question }}</p>
+  <ul>
+    <li *ngFor="let option of question?.options; let i = index">
+      <input type="radio" name="answer" [value]="option" id="option{{ i }}" (change)="selectedAnswer = option">
+      <label for="option{{ i }}">{{ option }}</label>
+    </li>
+  </ul>
+  <button (click)="nextQuestion()">Next</button>
+</div>
+
