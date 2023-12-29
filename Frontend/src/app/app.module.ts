@@ -9,18 +9,21 @@ import { fas } from '@fortawesome/free-solid-svg-icons';
 import { far } from '@fortawesome/free-regular-svg-icons';
 import { FormsModule,ReactiveFormsModule } from "@angular/forms";
 import { HttpClientModule } from '@angular/common/http';
-import { LearningPackageService } from './learning-package.service';
 import { QuizComponent } from './quiz/quiz.component';
 import {HomeComponent} from "./home/home.component";
 import { QuizSummaryComponent } from './quiz-summary/quiz-summary.component';
-
-
+import { KnowledgeSearchComponent } from './knowledge-search/knowledge-search.component';
+import { GridComponent } from './grid/grid.component';
+import { AgGridModule } from 'ag-grid-angular';
+import { Grid } from 'ag-grid-community';
 @NgModule({
   declarations: [
     AppComponent,
     QuizComponent,
     HomeComponent,
     QuizSummaryComponent,
+    KnowledgeSearchComponent,
+    GridComponent,
   ],
   imports: [
     BrowserModule,
@@ -29,9 +32,9 @@ import { QuizSummaryComponent } from './quiz-summary/quiz-summary.component';
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
+    AgGridModule,
     FontAwesomeModule
   ],
-  providers: [LearningPackageService],
   bootstrap: [AppComponent]
 })
 export class AppModule {

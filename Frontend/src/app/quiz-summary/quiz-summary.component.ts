@@ -12,6 +12,23 @@ export class QuizSummaryComponent implements OnInit{
 
   ngOnInit(): void {
     console.log('User Responses in Quiz Summary:', this.quizDataService.userResponses);
+    this.userResponses = this.quizDataService.userResponses;
+  }
+  calculateCorrectAnswers(): number {
+    // Implement logic to calculate the number of correct answers
+    // Example: Assuming the correct answers are stored in your userResponses
+    return this.userResponses.filter(response => response.userAnswer === response.correctAnswer).length;
+  }
+  isAnswerCorrect(response: any): boolean {
+    return response.userAnswer === response.correctAnswer;
+  }
+
+  calculateScore(): number {
+    // Implement logic to calculate the score as a percentage
+    // Example: Assuming each question carries equal weight
+    const totalQuestions = this.userResponses.length;
+    const correctAnswers = this.calculateCorrectAnswers();
+    return (correctAnswers / totalQuestions) * 100;
   }
 
 }

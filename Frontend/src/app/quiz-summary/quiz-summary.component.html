@@ -1,9 +1,19 @@
 <div class="summary-container">
   <h2>Quiz Summary</h2>
-  <div *ngFor="let response of quizDataService.userResponses; let i = index">
+  <div *ngFor="let response of userResponses; let i = index">
     <p>Question {{ i + 1 }}: {{ response.question }}</p>
-    <p>User's Answer: {{ response.userAnswer }}</p>
+    <p>User's Answer:
+      <span [ngClass]="{'text-success': isAnswerCorrect(response), 'text-danger': !isAnswerCorrect(response)}">
+        {{ response.userAnswer }}
+      </span>
+    </p>
     <p>Correct Answer: {{ response.correctAnswer }}</p>
     <hr>
+  </div>
+  <div>
+    <p>Total Questions: {{ userResponses.length }}</p>
+    <p>Correct Answers: {{ calculateCorrectAnswers() }}</p>
+    <p>Incorrect Answers: {{ userResponses.length - calculateCorrectAnswers() }}</p>
+    <p>Score: {{ calculateScore() }}%</p>
   </div>
 </div>
