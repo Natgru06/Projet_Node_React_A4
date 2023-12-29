@@ -12,7 +12,7 @@ Ennoncé du projet :
 
 Nous avons réalisé un genre de QCM pour se rapprocher de la manière dont l'application ANKI fonctionne avec des statistiques sur les résultats du QCM.
 
-Monsieur, les logs du GitHub sont faussés car nous avons préférés avancer notre projet via Discord pour des raisons de praticularité pour prouvé cela voici des screens de nos conversations.
+Monsieur, les logs du GitHub sont faussés car nous avons préférés avancer notre projet via Discord pour des raisons de praticalité pour prouvé cela voici des screens de nos conversations.
 ![image](https://github.com/Natgru06/Projet_Node_React_A4/assets/117108273/09527c99-ceac-446e-8107-a97e28cbf95b)
 
 Nathan-Gabriel PUNDOGAR et celui en charge de faire le lien entre le Front-End et le Back-End ainsi que les finitions c'est pourquoi il envoya tout les fichiers en meme temps aujourd'hui.
