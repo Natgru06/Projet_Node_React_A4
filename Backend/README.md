@@ -14,6 +14,7 @@ Les deux API sont sur deux port différent
 Le server.js est composé des 20 questions du quiz et une méthode GET est utilisé afin que le frontend puisse récupérer les questions. Il est situé sur le port 3000.
 
 _Code de la méthode GET_
+
 ![image](https://github.com/Natgru06/Projet_Node_React_A4/assets/108078812/54a4d4ab-0909-49e5-bb7e-5517e65e91af)
 
 _Code pour récupérer dans le Frontend_
