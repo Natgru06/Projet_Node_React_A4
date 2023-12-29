@@ -10,5 +10,5 @@ Membre d'équipe :
 
 Ennoncé du projet :
 
-Nous avons réalisé un genre de QCM pour apprendre
+Nous avons réalisé un genre de QCM pour se rapprocher de la manière dont l'application ANKI fonctionne avec des statistiques sur les résultats du QCM
 
